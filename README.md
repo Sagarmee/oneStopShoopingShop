@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Payment Gateway Assignment
 
-## Getting Started
+A modern e-commerce checkout implementation with payment processing simulation, built using Next.js, Shadcn UI, and React Context API.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Dynamic product listing
+- Cart management with quantity controls
+- Multi-step checkout process
+- Payment form with validation
+- Secure tokenization simulation
+- Order confirmation flow
+- Responsive UI
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup Instructions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Sagarmee/oneStopShoopingShop.git
+   cd oneStopShoopingShop
+   
+2. **Install dependencies**
+    npm install
+   
+3. **Run the development server**
+    npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. **Access the application**
+    http://localhost:3000
 
-## Learn More
+5. **Tokenization Logic**
+    
+  **Implementation Details**
 
-To learn more about Next.js, take a look at the following resources:
+   **Algorithm**: SHA-256 hashing (via crypto-js)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    **Data Included**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+      Card Number
 
-## Deploy on Vercel
+      Expiry Date
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+      CVV
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+      Cardholder Name
+
+  **Process**:
+
+  1. Combine all card details into a single string
+  2. Generate SHA-256 hash of the combined string
+  3. Convert hash to hexadecimal format
+  4. Log/display the resulting token
+
+
+
+
+
+
+
+
+
+   
